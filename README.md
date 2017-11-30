@@ -1,0 +1,1 @@
+Requires Node 6+, NPM or Yarn, and MongoDB
