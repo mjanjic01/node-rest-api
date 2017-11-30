@@ -1,0 +1,38 @@
+{
+  "name": "node-rest-api",
+  "version": "1.0.0",
+  "description": "Node REST API for SOC lab1",
+  "main": "src/index.js",
+  "author": "Matej Janjic <matej.janjic@infinum.hr>",
+  "license": "MIT",
+  "scripts": {
+    "__eslint": "eslint src test",
+    "test": "NODE_ENV='test' mocha --timeout 120000 --recursive --check-leaks --exit test/",
+    "doc": "apidoc -i src/api/ -o src/public/",
+    "dev": "NODE_ENV='development' nodemon --inspect src/index.js",
+    "start": "NODE_ENV='production' node src/index.js"
+  },
+  "devDependencies": {
+    "apidoc": "^0.17.6",
+    "chai": "^4.1.2",
+    "eslint": "^4.10.0",
+    "eslint-config-airbnb-base": "^12.1.0",
+    "eslint-plugin-import": "^2.8.0",
+    "faker": "^4.1.0",
+    "mocha": "^4.0.1",
+    "mockgoose": "^7.3.3",
+    "nodemon": "^1.12.1",
+    "supertest": "^3.0.0"
+  },
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "chalk": "^2.3.0",
+    "dotenv": "^4.0.0",
+    "errorhandler": "^1.5.0",
+    "express": "^4.16.2",
+    "express-bearer-token": "^2.1.0",
+    "helmet": "^3.9.0",
+    "jsonwebtoken": "^8.1.0",
+    "mongoose": "^4.13.0"
+  }
+}
